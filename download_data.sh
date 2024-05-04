@@ -1,0 +1,1 @@
+curl https://s3.us-west-2.amazonaws.com/testing.resources/datasets/deepfashion/deep_fashion.tar -o deep_fashion.tar
