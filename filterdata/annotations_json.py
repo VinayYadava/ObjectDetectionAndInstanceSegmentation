@@ -39,12 +39,51 @@ def get_keys(dic , verbose = False):
         verbose (bool, optional): If True, print JSON data. Defaults to False.
 
     Returns:
-        dict: Dictionary containing the JSON data.
+        list:  list containing the keys.
     """
     keys = dic.keys()
     if verbose:
         print("Keys :",keys)
     return keys
+
+def get_categories(dic , verbose = False):
+    """
+    Read dictionary object and return categories.
+
+    Args:
+        dic (dict): Path to the JSON file.
+        verbose (bool, optional): If True, print JSON data. Defaults to False.
+
+    Returns:
+        dict :   returns dict.
+    """
+    categories = dic["categories"]
+    if verbose:
+        print("Categories :",categories)
+    return categories
+
+
+
+def get_info(dic , verbose = True):
+    """
+    Read dictionary object and return JSON data.
+
+    Args:
+        dic (dict): Path to the JSON file.
+        verbose (bool, optional): If True, print JSON data. Defaults to False.
+
+    Returns:
+        dict: Dictionary containing the JSON data.
+    """
+    info = dic["info"]
+    if verbose:
+        print("Info :",info)
+    return info
+
 if __name__ == "__main__":
-    data = read_json("labels.json" , verbose = True)
-    
+    json_path = r"C:\Users\spars\Downloads\deep_fashion\deep_fashion\annotations\instances_val2024.json"
+    data = read_json(json_path , verbose = False)
+    get_keys(data,verbose=True)
+    info = get_info(data , verbose = True)
+    get_categories(data,verbose=True)
+
