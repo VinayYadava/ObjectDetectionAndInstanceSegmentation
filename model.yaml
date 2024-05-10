@@ -130,7 +130,7 @@ head:
 
    # detect
    [[31, 34, 37, 16, 19, 22], 1, DualDDetect, [nc]],  # DualDDetect(A3, A4, A5, P3, P4, P5)
-   
+  
    # segment
    [[31, 34, 37, 16, 19, 22, 40, 43], 1, DualDSegment, [nc, 32, 256]],  # Segment(P3, P4, P5)
   
